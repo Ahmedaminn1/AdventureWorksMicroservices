@@ -1,0 +1,75 @@
+# Compiled object files
+*.o
+*.obj
+*.dll
+*.exe
+*.pdb
+*.log
+ 
+# Build folders
+bin/
+obj/
+out/
+ 
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+ 
+# Visual Studio specific
+.vs/
+.vscode/
+ 
+# Rider specific
+.idea/
+*.sln.iml
+ 
+# Logs
+*.log
+*.tlg
+ 
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+ 
+# Environment and configuration files
+appsettings*.json
+.env
+secrets.json
+ 
+# OS generated files
+Thumbs.db
+*.DS_Store
+.DS_Store?
+ 
+# Cache and temporary files
+*.tmp
+*.bak
+*.swp
+*.pid
+*.seed
+*.coveragerc
+*.coverage
+*.cache
+*.log
+*.coveragexml
+ 
+# Test results
+TestResults/
+*.trx
+*.coverage
+ 
+# Generated files
+*.generated.cs
+Generated_Code/
+ 
+# Tool-specific files
+*.resharper
+_Resharper*
+*.DotSettings.user
+ 
+# Node modules (if used in conjunction with front-end frameworks)
+node_modules/
