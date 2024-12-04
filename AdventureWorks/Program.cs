@@ -1,3 +1,6 @@
+using AdventureWorks.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace AdventureWorks
 {
     public class Program
@@ -7,6 +10,15 @@ namespace AdventureWorks
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            //builder.Services.AddDbContext<BrandContext>(options =>
+            //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddDbContext<BrandContext>(options =>
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                           .EnableSensitiveDataLogging()
+                           .EnableDetailedErrors());
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

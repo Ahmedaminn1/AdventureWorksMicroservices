@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "ahmedamin@Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1446:1433"
+  api:
+    build: .
+    depends_on:
+      - sqlserver
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=AdventureWorks2012;User Id=sa;Password=ahmedamin@Passw0rd;"
+    ports:
+      - "7022:80"
